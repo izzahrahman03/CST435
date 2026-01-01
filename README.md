@@ -36,21 +36,21 @@ Experiments are conducted by varying the number of workers and processes (2, 4 a
 ### **2. System Requirement**
 
 **Operating System**
-Ubuntu 20.04 / 22.04 (GCP VM)
+- Ubuntu 20.04 / 22.04 (GCP VM)
 
 **Hardware**
-Google Cloud VM
-8vCPUs
+- Google Cloud VM
+- 8vCPUs
 
 **Software**
-Python 3.10+
-Virtual Environment (venv)
+- Python 3.10+
+- Virtual Environment (venv)
 
 **Required Libraries**
-numpy
-opencv-python
-pillow
-matplotlib
+- numpy
+- opencv-python
+- pillow
+- matplotlib
 
 ---
 
