@@ -51,6 +51,7 @@ numpy
 opencv-python
 pillow
 matplotlib
+
 ---
 
 ### **3. Environment Setup**
