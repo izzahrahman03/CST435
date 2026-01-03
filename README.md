@@ -75,14 +75,14 @@ Experiments are conducted on the same virtual machine while varying the number o
 │   ├── tiramisu/
 │   └── waffle/
 ├── output/
-│   ├── concurrent_futures/
+│   ├── cf/
 │   │   ├── 2_workers/
 │   │   ├── 4_workers/
 │   │   └── 8_workers/
-│   ├── multiprocessing/
-│   │   ├── 2_workers/
-│   │   ├── 4_workers/
-│   │   └── 8_workers/
+│   ├── mp/
+│   │   ├── 2_proc/
+│   │   ├── 4_proc/
+│   │   └── 8_proc/
 │   └── sequential/
 ├── .gitignore
 ├── README.md
@@ -91,6 +91,7 @@ Experiments are conducted on the same virtual machine while varying the number o
 ├── multiprocessing_ver.py
 ├── sequential.py
 └── utils.py
+
 
 ### **5. Dataset Description**
 The dataset consists of 120 food images, equally distributed across three categories:
