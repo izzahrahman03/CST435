@@ -68,7 +68,9 @@ Experiments are conducted on the same virtual machine while varying the number o
     pip install numpy opencv-python pillow matplotlib
     ```
 ---
+
 ### **4. Project Structure**
+```lua
 .
 ├── dataset/
 │   ├── takoyaki/
@@ -91,7 +93,8 @@ Experiments are conducted on the same virtual machine while varying the number o
 ├── multiprocessing_ver.py
 ├── sequential.py
 └── utils.py
-
+```
+---
 
 ### **5. Dataset Description**
 The dataset consists of 120 food images, equally distributed across three categories:
