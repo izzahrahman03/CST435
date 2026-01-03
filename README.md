@@ -136,11 +136,17 @@ Each execution prints:
 3. Same dataset used for all executions
 4. Sequential execution used as baseline
 
+**Speedup Results**
 | Workers  | Multiprocessing Time (s) | Multiprocessing Speedup | Multiprocessing Speedup (s) |Multiprocessing Speedup |
 |----------|--------------------------|-------------------------|-----------------------------|-------------------------|
 | 2        | 0.560                    |1.37x                    |0.470                        |1.63x                    |
 | 4        | 0.333                    |2.31x                    |0.331                        |2.32x                    |
 | 8        | 0.258                    |2.98x                    |0.244                        |3.15                    |
 
-
+**Efficiency Results**
+| Workers  | Multiprocessing Efficiency  | Concurrent.futures Efficiency  |
+|----------|-----------------------------|--------------------------------|
+| 2        | 68.5%                       |81.5%                           |
+| 4        | 57.8%                       |58.0%                           |
+| 8        | 37.3%                       |39.4%                           |
 
