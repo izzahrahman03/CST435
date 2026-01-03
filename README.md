@@ -51,19 +51,26 @@ Experiments are conducted on the same virtual machine while varying the number o
 ---
 
 ### **3. Environment Setup**
+1. Instance Configuration
+• Navigate to the Compute Engine section in the Google Cloud Console.
+• Select Create Instance.
+• Machine Family: Select General purpose, Series E2.
+• Machine Type: Select E2 series and e2-standard-8.
+• Boot Disk: Select Debian GNU/Linux 12 (bookworm) with 10 GB storage.
+• Firewall: Default settings are sufficient.
 
-1.  Install System Dependency
+2.  Install System Dependency
     ```bash
     sudo apt update
     sudo apt install -y python3-venv python3-full
     sudo apt install -y libgl1 libglib2.0-0
     ```
-2.  Create Virtual Environment
+3.  Create Virtual Environment
     ```bash
     python3 -m venv venv
     source venv/bin/activate
     ```
-3.  Install Required Packages
+4.  Install Required Packages
     ```bash
     pip install numpy opencv-python pillow matplotlib
     ```
