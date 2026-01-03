@@ -9,7 +9,7 @@ Prepared by:
 | NAME                                | MATRIC NUMBER |
 |-------------------------------------|---------------|
 | Nurul Afiqah Binti Azhar            | 160335        |
-| Nur Aina Sofeya Binti Mohamed Yusof | 160        |
+| Nur Aina Sofeya Binti Mohamed Yusof | 160423        |
 | Siti Nawwarah Binti Mohd Abd Hadi   | 160304        |
 | Siti Nur Izzah Binti Abdul Rahman   | 160302        |
 
