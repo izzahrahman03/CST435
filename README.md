@@ -16,25 +16,21 @@ Prepared by:
 ---
 
 ### **1. Introduction**
+This project evaluates the effectiveness of parallel computing techniques for accelerating image processing workloads. Three execution models are implemented and compared:
+- Sequential execution
+- Multiprocessing using Python’s multiprocessing module
+- Concurrent execution using concurrent.futures
+  
+The primary objective is to analyze how data parallelism improves performance by measuring:
+- Execution time
+- Speedup
+- Parallel efficiency
 
-This project evaluates the performance of different execution models for image processing tasks such as:
-
-1. Sequential execution
-2. Multiprocessing
-3. Concurrent execution using concurrent.futures
-
-The objective is to analyze how parallelism improves performance by measuring:
-
-1. Execution time
-2. Speedup
-3. Efficiency
-
-Experiments are conducted by varying the number of workers and processes (2, 4 and 8) on the same virtual machine.
+Experiments are conducted on the same virtual machine while varying the number of workers (2, 4, and 8) to observe scalability behavior and parallel overhead.
 
 ---
 
 ### **2. System Requirement**
-
 **Operating System**
 - Ubuntu 20.04 / 22.04 (GCP VM)
 
@@ -72,8 +68,45 @@ Experiments are conducted by varying the number of workers and processes (2, 4 a
     pip install numpy opencv-python pillow matplotlib
     ```
 ---
+### **4. Project Structure**
+.
+├── data/
+│   ├── waffles/
+│   ├── takoyaki/
+│   └── tiramisu/
+├── output/
+│   ├── sequential/
+│   ├── multiprocessing/
+│   └── concurrent/
+├── filters.py
+├── utils.py
+├── sequential.py
+├── multiprocessing_ver.py
+├── concurrent_futures.py
+└── README.md
 
-### **4. How to Run the Programs**
+### **5. Dataset Description**
+The dataset consists of 120 food images, equally distributed across three categories:
+- Waffles
+- Takoyaki
+- Tiramisu
+
+Images are stored in JPEG format with varying resolutions. The dataset is organized into category-based directories and dynamically discovered at runtime using directory traversal. This design allows the dataset to be extended or modified without requiring changes to the codebase.
+
+---
+
+### **6. Image Processing Pipeline**
+Each image is processed using a fixed sequential pipeline consisting of five filters:
+
+Grayscale Conversion - Convert RGB images to grayscale using luminance formula
+Gaussian Blur - Apply 3×3 Gaussian kernel for smoothing
+Edge Detection - Sobel filter to detect edges
+Image Sharpening - Enhance edges and details
+Brightness Adjustment - Increase or decrease image brightness
+
+---
+
+### **7. How to Run the Programs**
 
 1.  Sequential Execution
     ```bash
@@ -92,4 +125,22 @@ Each execution prints:
 1. Total images processed
 2. Successful and failed images
 3. Execution Time
+
+---
+
+### **8. Performance Analysis**
+
+**Experimental Configuration**
+1. Worker counts tested: 2, 4, 8
+2. CPU cores available: 8 vCPUs
+3. Same dataset used for all executions
+4. Sequential execution used as baseline
+
+| Workers  | Multiprocessing Time (s) | Multiprocessing Speedup | Multiprocessing Speedup (s) |Multiprocessing Speedup |
+|----------|--------------------------|-------------------------|-----------------------------|-------------------------|
+| 2        | 0.560                    |1.37x                    |0.470                        |1.63x                    |
+| 4        | 0.333                    |2.31x                    |0.331                        |2.32x                    |
+| 8        | 0.258                    |2.98x                    |0.244                        |3.15                    |
+
+
 
