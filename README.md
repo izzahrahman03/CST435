@@ -52,17 +52,12 @@ Experiments are conducted on the same virtual machine while varying the number o
 
 ### **3. Environment Setup**
 1. Instance Configuration
-• Navigate to the Compute Engine section in the Google Cloud Console.
-
-• Select Create Instance.
-
-• Machine Family: Select General purpose, Series E2.
-
-• Machine Type: Select E2 series and e2-standard-8.
-
-• Boot Disk: Select Debian GNU/Linux 12 (bookworm) with 10 GB storage.
-
-• Firewall: Default settings are sufficient.
+- Navigate to the Compute Engine section in the Google Cloud Console.
+- Select Create Instance.
+- Machine Family: Select General purpose, Series E2.
+- Machine Type: Select E2 series and e2-standard-8.
+- Boot Disk: Select Debian GNU/Linux 12 (bookworm) with 10 GB storage.
+- Firewall: Default settings are sufficient.
 
 3.  Install System Dependency
     ```bash
