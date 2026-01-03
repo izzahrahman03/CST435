@@ -70,20 +70,27 @@ Experiments are conducted on the same virtual machine while varying the number o
 ---
 ### **4. Project Structure**
 .
-├── data/
-│   ├── waffles/
+├── dataset/
 │   ├── takoyaki/
-│   └── tiramisu/
+│   ├── tiramisu/
+│   └── waffle/
 ├── output/
-│   ├── sequential/
-│   ├── multiprocessing/
-│   └── concurrent/
-├── filters.py
-├── utils.py
-├── sequential.py
-├── multiprocessing_ver.py
+│   ├── cf/
+│   │   ├── 2_workers/
+│   │   ├── 4_workers/
+│   │   ├── 8_workers/
+│   ├── mp/
+│   │   ├── 2_proc/
+│   │   ├── 4_proc/
+│   │   ├── 8_proc/
+│   └── sequenstial/
+├── .gitignore
+├── README.md
 ├── concurrent_futures.py
-└── README.md
+├── filters.py
+├── multiprocessing_ver.py
+├── sequential.py
+└── utils.py
 
 ### **5. Dataset Description**
 The dataset consists of 120 food images, equally distributed across three categories:
