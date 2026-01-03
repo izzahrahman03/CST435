@@ -75,15 +75,15 @@ Experiments are conducted on the same virtual machine while varying the number o
 │   ├── tiramisu/
 │   └── waffle/
 ├── output/
-│   ├── cf/
+│   ├── concurrent_futures/
 │   │   ├── 2_workers/
 │   │   ├── 4_workers/
-│   │   ├── 8_workers/
-│   ├── mp/
-│   │   ├── 2_proc/
-│   │   ├── 4_proc/
-│   │   ├── 8_proc/
-│   └── sequenstial/
+│   │   └── 8_workers/
+│   ├── multiprocessing/
+│   │   ├── 2_workers/
+│   │   ├── 4_workers/
+│   │   └── 8_workers/
+│   └── sequential/
 ├── .gitignore
 ├── README.md
 ├── concurrent_futures.py
