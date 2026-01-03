@@ -98,9 +98,9 @@ Experiments are conducted on the same virtual machine while varying the number o
 
 ### **5. Dataset Description**
 The dataset consists of 120 food images, equally distributed across three categories:
-- Waffles
-- Takoyaki
-- Tiramisu
+- 40 images of Waffles
+- 40 images of Takoyaki
+- 40 images of Tiramisu
 
 Images are stored in JPEG format with varying resolutions. The dataset is organized into category-based directories and dynamically discovered at runtime using directory traversal. This design allows the dataset to be extended or modified without requiring changes to the codebase.
 
