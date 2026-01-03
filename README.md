@@ -126,6 +126,8 @@ Brightness Adjustment - Increase or decrease image brightness
 
 ### **7. How to Run the Programs**
 
+After upload the zip file, you are required to run these commands:
+
 1.  Sequential Execution
     ```bash
     python sequential.py
