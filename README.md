@@ -108,7 +108,7 @@ All experiments are deployed and executed on a Google Cloud Platform (GCP) virtu
 ---
 
 ### **5. Dataset Description**
-The dataset consists of 2000 food images, equally distributed across three categories:
+The dataset consists of 2000 food images, equally distributed across two categories:
 - 1000 images of carrot cake
 - 1000 images of chicken curry
 
@@ -160,7 +160,7 @@ Each execution prints:
 4. Sequential execution used as baseline
 
 **Speedup Results**
-| Workers  | Multiprocessing Time (s) | Multiprocessing Speedup | Multiprocessing Speedup (s) |Multiprocessing Speedup |
+| Workers  | Multiprocessing Time (s) | Multiprocessing Speedup | Concurrent.futures Time (s) |Concurrent.futures Speedup |
 |----------|--------------------------|-------------------------|-----------------------------|-------------------------|
 | 2        | 0.560                    |1.37x                    |0.470                        |1.63x                    |
 | 4        | 0.333                    |2.31x                    |0.331                        |2.32x                    |
