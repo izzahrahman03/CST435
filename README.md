@@ -59,12 +59,19 @@ Experiments are conducted on the same virtual machine while varying the number o
 - Boot Disk: Select Debian GNU/Linux 12 (bookworm) with 10 GB storage.
 - Firewall: Default settings are sufficient.
 
-3.  Install System Dependency
+2.  Install System Dependency
     ```bash
     sudo apt update
+    sudo apt install git
     sudo apt install -y python3-venv python3-full
     sudo apt install -y libgl1 libglib2.0-0
     ```
+3. Git Clone and Navigate to Project Folder
+   ```bash
+   git clone https://github.com/izzahrahman03/CST435.git
+   cd CST435
+   ```
+   
 4.  Create Virtual Environment
     ```bash
     python3 -m venv venv
@@ -80,9 +87,8 @@ Experiments are conducted on the same virtual machine while varying the number o
 ```lua
 .
 ├── dataset/
-│   ├── takoyaki/
-│   ├── tiramisu/
-│   └── waffle/
+│   ├── carrot_cake/
+│   └── chicken_curry/
 ├── output/
 │   ├── cf/
 │   │   ├── 2_workers/
@@ -104,12 +110,11 @@ Experiments are conducted on the same virtual machine while varying the number o
 ---
 
 ### **5. Dataset Description**
-The dataset consists of 120 food images, equally distributed across three categories:
-- 40 images of Waffles
-- 40 images of Takoyaki
-- 40 images of Tiramisu
+The dataset consists of 2000 food images, equally distributed across three categories:
+- 1000 images of carrot cake
+- 1000 images of chicken curry
 
-Images are stored in JPEG format with varying resolutions. The dataset is organized into category-based directories and dynamically discovered at runtime using directory traversal. This design allows the dataset to be extended or modified without requiring changes to the codebase.
+Images are stored in JPG format with varying resolutions. The dataset is organized into category-based directories and dynamically discovered at runtime using directory traversal. This design allows the dataset to be extended or modified without requiring changes to the codebase.
 
 ---
 
@@ -126,7 +131,7 @@ Each image is processed using a fixed sequential pipeline consisting of five fil
 
 ### **7. How to Run the Programs**
 
-After upload the zip file, you are required to run these commands:
+You are required to run these commands:
 
 1.  Sequential Execution
     ```bash
