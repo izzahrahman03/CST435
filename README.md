@@ -16,17 +16,15 @@ Prepared by:
 ---
 
 ### **1. Introduction**
-This project evaluates the effectiveness of parallel computing techniques for accelerating image processing workloads. Three execution models are implemented and compared:
-- Sequential execution
-- Multiprocessing using Python’s multiprocessing module
-- Concurrent execution using concurrent.futures
-  
-The primary objective is to analyze how data parallelism improves performance by measuring:
-- Execution time
-- Speedup
-- Parallel efficiency
 
-Experiments are conducted on the same virtual machine while varying the number of workers (2, 4, and 8) to observe scalability behavior and parallel overhead.
+This project evaluates the effectiveness of parallel computing techniques for image filtering and performance evaluation using Python. Two parallel programming paradigms are implemented and compared:
+
+- Multiprocessing using Python’s multiprocessing module
+- Concurrent execution using Python’s concurrent.futures
+
+A sequential implementation is used as a baseline for performance comparison. The primary objective is to analyze how data parallelism improves performance by measuring execution time, speedup and parallel efficiency.
+
+All experiments are deployed and executed on a Google Cloud Platform (GCP) virtual machine while varying the number of workers (2, 4, and 8) to evaluate scalability, parallel overhead and resource utilization.
 
 ---
 
