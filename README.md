@@ -116,11 +116,11 @@ Images are stored in JPEG format with varying resolutions. The dataset is organi
 ### **6. Image Processing Pipeline**
 Each image is processed using a fixed sequential pipeline consisting of five filters:
 
-Grayscale Conversion - Convert RGB images to grayscale using luminance formula
-Gaussian Blur - Apply 3×3 Gaussian kernel for smoothing
-Edge Detection - Sobel filter to detect edges
-Image Sharpening - Enhance edges and details
-Brightness Adjustment - Increase or decrease image brightness
+- Grayscale Conversion - Convert RGB images to grayscale using luminance formula
+- Gaussian Blur - Apply 3×3 Gaussian kernel for smoothing
+- Edge Detection - Sobel filter to detect edges
+- Image Sharpening - Enhance edges and details
+- Brightness Adjustment - Increase or decrease image brightness
 
 ---
 
