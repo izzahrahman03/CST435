@@ -2,7 +2,8 @@ import os
 import time
 from utils import process_image
 
-DATASET_DIR = "dataset"
+# DATASET_DIR = "dataset"
+DATASET_DIR = "dataset2"
 OUTPUT_DIR = os.path.join("output", "sequential")
 
 def get_images():

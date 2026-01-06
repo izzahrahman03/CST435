@@ -3,7 +3,8 @@ import time
 from concurrent.futures import ProcessPoolExecutor
 from utils import process_image
 
-DATASET_DIR = "dataset"
+# DATASET_DIR = "dataset"
+DATASET_DIR = "dataset2"
 OUTPUT_BASE = os.path.join("output", "cf")
 
 def get_images():
