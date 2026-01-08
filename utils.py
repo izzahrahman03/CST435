@@ -3,7 +3,7 @@ import cv2
 from filters import grayscale, gaussian_blur, sobel_edge, sharpen, adjust_brightness
 
 def process_image(img_path, output_dir):
-    # Reads an image, applies a sequence of image processing filters, and saves the result.
+    # Reads an image, applies a sequence of image processing filters and saves the result.
     try:
         # Load the image from the given file path
         img = cv2.imread(img_path)
@@ -29,3 +29,4 @@ def process_image(img_path, output_dir):
         # Handle and report any errors during image processing
         print(f"Error processing {img_path}: {e}")
         return False
+
