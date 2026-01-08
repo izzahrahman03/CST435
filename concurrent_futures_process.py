@@ -10,11 +10,11 @@ DATASET_DIR = "dataset"
 OUTPUT_BASE = os.path.join("output", "cf")
 
 def get_images():
-    # Collects all .jpg and .jpeg image file paths from the dataset directory.
+    # Collects all .jpg image file paths from the dataset directory.
     images = []
     for root, _, files in os.walk(DATASET_DIR):
         for f in files:
-            if f.lower().endswith((".jpg", ".jpeg")):
+            if f.lower().endswith((".jpg")):
                 images.append(os.path.join(root, f))
     return images
 
@@ -58,3 +58,4 @@ if __name__ == "__main__":
         print(f"TIME (seconds) : {end - start:.3f}")
 
     print("\nAll concurrent.futures process experiments completed.")
+
