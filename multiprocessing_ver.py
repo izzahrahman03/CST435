@@ -10,7 +10,7 @@ DATASET_DIR = "dataset"
 OUTPUT_BASE = os.path.join("output", "mp")
 
 def get_images():
-    # Collects all .jpg and image file paths from the dataset directory.
+    # Collects all .jpg image file paths from the dataset directory.
     images = []
     for root, _, files in os.walk(DATASET_DIR):
         for f in files:
@@ -58,4 +58,5 @@ if __name__ == "__main__":
         print(f"TIME (seconds) : {end - start:.3f}")
 
     print("\nAll multiprocessing experiments completed.")
+
 
