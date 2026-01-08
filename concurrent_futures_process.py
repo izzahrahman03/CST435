@@ -35,9 +35,9 @@ if __name__ == "__main__":
     images = get_images()
     total_images = len(images)
 
-    print("========================================")
-    print("MODE : CONCURRENT.FUTURES (AUTO 2,4,8)")
-    print("========================================")
+    print("================================================")
+    print("MODE : CONCURRENT.FUTURES PROCESS (AUTO 2,4,8)")
+    print("================================================")
 
     # Run experiments with different numbers of worker processes
     for workers in [2, 4, 8]:
@@ -74,3 +74,4 @@ if __name__ == "__main__":
         print(f"TIME (seconds) : {end - start:.3f}")
 
     print("\nAll concurrent.futures experiments completed.")
+
