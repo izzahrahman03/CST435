@@ -24,11 +24,57 @@ This project evaluates the effectiveness of parallel computing techniques for im
 
 A sequential implementation is used as a baseline for performance comparison. The primary objective is to analyze how data parallelism improves performance by measuring execution time, speedup and parallel efficiency.
 
-All experiments are deployed and executed on a Google Cloud Platform (GCP) virtual machine while varying the number of workers (2, 4, and 8) to evaluate scalability, parallel overhead and resource utilization.
+All experiments are deployed and executed on a Google Cloud Platform (GCP) virtual machine while varying the number of workers (2, 4 and 8) to evaluate scalability, parallel overhead and resource utilization.
 
 ---
 
-### **2. System Requirement**
+### **2. Dataset Description**
+The dataset consists of 2000 food images, equally distributed across two categories:
+- 1000 images of carrot cake
+- 1000 images of chicken curry
+
+Images are stored in JPG format with varying resolutions. The dataset is organized into category-based directories and dynamically discovered at runtime using directory traversal. This design allows the dataset to be extended or modified without requiring changes to the codebase.
+
+---
+
+### **3. Image Processing Pipeline**
+Each image is processed using a fixed sequential pipeline consisting of five filters:
+
+- Grayscale Conversion - Convert RGB images to grayscale using luminance formula
+- Gaussian Blur - Apply 3×3 Gaussian kernel for smoothing
+- Edge Detection - Sobel filter to detect edges
+- Image Sharpening - Enhance edges and details
+- Brightness Adjustment - Increase or decrease image brightness
+  
+---
+
+### **4. Project Structure**
+```lua
+.
+├── dataset/
+│   ├── carrot_cake/
+│   └── chicken_curry/
+├── output/
+│   ├── cf/
+│   │   ├── 2_workers/
+│   │   ├── 4_workers/
+│   │   └── 8_workers/
+│   ├── mp/
+│   │   ├── 2_proc/
+│   │   ├── 4_proc/
+│   │   └── 8_proc/
+│   └── sequential/
+├── .gitignore
+├── README.md
+├── concurrent_futures.py
+├── filters.py
+├── multiprocessing_ver.py
+├── sequential.py
+└── utils.py
+```
+---
+
+### **5. System Requirement**
 **Operating System**
 - Ubuntu 20.04 / 22.04 (GCP VM)
 
@@ -48,7 +94,7 @@ All experiments are deployed and executed on a Google Cloud Platform (GCP) virtu
 
 ---
 
-### **3. Environment Setup**
+### **6. Environment Setup**
 1. Instance Configuration
 - Navigate to the Compute Engine section in the Google Cloud Console.
 - Select Create Instance.
@@ -81,52 +127,6 @@ All experiments are deployed and executed on a Google Cloud Platform (GCP) virtu
     ```
 ---
 
-### **4. Project Structure**
-```lua
-.
-├── dataset/
-│   ├── carrot_cake/
-│   └── chicken_curry/
-├── output/
-│   ├── cf/
-│   │   ├── 2_workers/
-│   │   ├── 4_workers/
-│   │   └── 8_workers/
-│   ├── mp/
-│   │   ├── 2_proc/
-│   │   ├── 4_proc/
-│   │   └── 8_proc/
-│   └── sequential/
-├── .gitignore
-├── README.md
-├── concurrent_futures.py
-├── filters.py
-├── multiprocessing_ver.py
-├── sequential.py
-└── utils.py
-```
----
-
-### **5. Dataset Description**
-The dataset consists of 2000 food images, equally distributed across two categories:
-- 1000 images of carrot cake
-- 1000 images of chicken curry
-
-Images are stored in JPG format with varying resolutions. The dataset is organized into category-based directories and dynamically discovered at runtime using directory traversal. This design allows the dataset to be extended or modified without requiring changes to the codebase.
-
----
-
-### **6. Image Processing Pipeline**
-Each image is processed using a fixed sequential pipeline consisting of five filters:
-
-- Grayscale Conversion - Convert RGB images to grayscale using luminance formula
-- Gaussian Blur - Apply 3×3 Gaussian kernel for smoothing
-- Edge Detection - Sobel filter to detect edges
-- Image Sharpening - Enhance edges and details
-- Brightness Adjustment - Increase or decrease image brightness
-
----
-
 ### **7. How to Run the Programs**
 
 You are required to run these commands:
@@ -139,11 +139,14 @@ You are required to run these commands:
     ```bash
     python multiprocessing_ver.py
     ```
-3.  Concurrent Futures Execution
+3.  Concurrent.futures Process Execution
     ```bash
-    python concurrent_futures.py
+    python concurrent_futures_process.py
     ```
-
+4.  Concurrent.futures Thread Execution
+    ```bash
+    python concurrent_futures_thread.py
+    ```
 Each execution prints:
 1. Total images processed
 2. Successful and failed images
