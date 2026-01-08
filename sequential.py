@@ -9,11 +9,11 @@ DATASET_DIR = "dataset"
 OUTPUT_DIR = os.path.join("output", "sequential")
 
 def get_images():
-    # Collects all .jpg and .jpeg image file paths from the dataset directory.
+    # Collects all .jpg and image file paths from the dataset directory.
     images = []
     for root, _, files in os.walk(DATASET_DIR):
         for f in files:
-            if f.lower().endswith((".jpg", ".jpeg")):
+            if f.lower().endswith((".jpg")):
                 images.append(os.path.join(root, f))
     return images
 
@@ -41,4 +41,10 @@ if __name__ == "__main__":
     end = time.time()
 
     print("========================================")
-    print("MODE           : SEQUENTIA
+    print("MODE           : SEQUENTIAL")
+    print(f"TOTAL IMAGES   : {total_images}")
+    print(f"SUCCESS        : {success}")
+    print(f"FAILED         : {fail}")
+    print(f"TIME (seconds) : {end - start:.3f}")
+    print(f"OUTPUT FOLDER  : {OUTPUT_DIR}")
+    print("========================================")
