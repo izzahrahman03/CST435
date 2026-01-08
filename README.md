@@ -20,7 +20,9 @@ Prepared by:
 This project evaluates the effectiveness of parallel computing techniques for image filtering and performance evaluation using Python. Two parallel programming paradigms are implemented and compared:
 
 - Multiprocessing using Python’s multiprocessing module
-- Concurrent execution using Python’s concurrent.futures
+- Concurrent execution using Python’s concurrent.futures, including:
+  - ProcessPoolExecutor for process-based parallelism
+  - ThreadPoolExecutor for thread-based parallelism
 
 A sequential implementation is used as a baseline for performance comparison. The primary objective is to analyze how data parallelism improves performance by measuring execution time, speedup and parallel efficiency.
 
@@ -66,7 +68,8 @@ Each image is processed using a fixed sequential pipeline consisting of five fil
 │   └── sequential/
 ├── .gitignore
 ├── README.md
-├── concurrent_futures.py
+├── concurrent_futures_process.py
+├── concurrent_futures_thread.py
 ├── filters.py
 ├── multiprocessing_ver.py
 ├── sequential.py
