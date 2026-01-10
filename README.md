@@ -181,7 +181,7 @@ Each execution prints:
                     |
 
 **Average Execution Time Comparison**
-Average Sequential Time (s): 15.185
+- Average Sequential Time (s): 15.185
 
 | Workers | Multiprocessing (s) | Concurrent.futures – Process (s) | Concurrent.futures – Thread (s) |
 | ------: | ------------------: | -------------------------------: | ------------------------------: |
