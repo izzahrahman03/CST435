@@ -208,6 +208,6 @@ Average Sequential Time (s): 15.185
 **Concurrent.futures Thread-Based Speedup and Efficiency**
 | Workers | Speedup (×) | Efficiency (%) |
 | ------: | ----------: | -------------: |
-|       2 |      1.818x |          90.90 |
-|       4 |      2.836x |          70.90 |
-|       8 |      3.730x |          46.63 |
+|    2    |   1.818x    |      90.90     |
+|    4    |   2.836x    |      70.90     |
+|    8    |   3.730x    |      46.63     |
