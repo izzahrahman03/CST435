@@ -50,7 +50,7 @@ Each image is processed using a fixed sequential pipeline consisting of five fil
   
 ---
 
-### **4. Project Structure**
+### **4. Project Code Structure**
 ```lua
 .
 ├── dataset/
