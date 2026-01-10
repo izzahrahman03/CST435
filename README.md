@@ -180,10 +180,34 @@ Each execution prints:
 |       8 | CF – Thread  |     3.324 |     3.685 |     5.204 |        12.213 | 12.213 / 3          |                      4.071 |
                     |
 
-**Efficiency Results**
-| Workers  | Multiprocessing Efficiency  | Concurrent.futures Efficiency  |
-|----------|-----------------------------|--------------------------------|
-| 2        | 68.5%                       |81.5%                           |
-| 4        | 57.8%                       |58.0%                           |
-| 8        | 37.3%                       |39.4%                           |
+**Average Execution Time Comparison**
+Average Sequential Time (s): 15.185
 
+| Workers | Multiprocessing (s) | Concurrent.futures – Process (s) | Concurrent.futures – Thread (s) |
+| ------: | ------------------: | -------------------------------: | ------------------------------: |
+|       2 |               8.037 |                            8.327 |                           8.352 |
+|       4 |               5.330 |                            5.563 |                           5.354 |
+|       8 |               3.992 |                            4.428 |                           4.071 |
+
+
+
+**Multiprocessing Speedup and Efficiency**
+| Workers | Speedup (×) | Efficiency (%) |
+| ------: | ----------: | -------------: |
+|    2    |   1.889×    |      94.45     |
+|    4    |   2.849×    |      71.23     |
+|    8    |   3.803×    |      47.54     |
+
+**Concurrent.futures Process-Based Speedup and Efficiency**
+| Workers | Speedup (×) | Efficiency (%) |
+| ------: | ----------: | -------------: |
+|    2    |   1.824x    |      91.20     |
+|    4    |   2.730x    |      68.25     |
+|    8    |   3.429x    |      42.86     |
+
+**Concurrent.futures Thread-Based Speedup and Efficiency**
+| Workers | Speedup (×) | Efficiency (%) |
+| ------: | ----------: | -------------: |
+|       2 |      1.818x |          90.90 |
+|       4 |      2.836x |          70.90 |
+|       8 |      3.730x |          46.63 |
