@@ -155,4 +155,3 @@ Each execution prints:
 2. Successful and failed images
 3. Execution Time
 
----|
