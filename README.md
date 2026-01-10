@@ -165,12 +165,20 @@ Each execution prints:
 3. Same dataset used for all executions
 4. Sequential execution used as baseline
 
-**Speedup Results**
-| Workers  | Multiprocessing Time (s) | Multiprocessing Speedup | Concurrent.futures Time (s) |Concurrent.futures Speedup |
-|----------|--------------------------|-------------------------|-----------------------------|-------------------------|
-| 2        | 0.560                    |1.37x                    |0.470                        |1.63x                    |
-| 4        | 0.333                    |2.31x                    |0.331                        |2.32x                    |
-| 8        | 0.258                    |2.98x                    |0.244                        |3.15                    |
+**Execution Time Results Details**
+| Workers | Method       | Run 1 (s) | Run 2 (s) | Run 3 (s) | Total Run (s) | Average Calculation | Average Execution Time (s) |
+| ------: | ------------ | --------: | --------: | --------: | ------------: | ------------------- | -------------------------: |
+|       1 | Sequential   |    15.804 |    14.690 |    15.062 |        45.556 | 45.556 / 3          |                     15.185 |
+|       2 | MP           |     7.877 |     8.133 |     8.100 |        24.110 | 24.110 / 3          |                      8.037 |
+|       4 | MP           |     5.161 |     5.406 |     5.422 |        15.989 | 15.989 / 3          |                      5.330 |
+|       8 | MP           |     2.990 |     4.012 |     4.974 |        11.976 | 11.976 / 3          |                      3.992 |
+|       2 | CF – Process |     7.870 |     8.617 |     8.495 |        24.982 | 24.982 / 3          |                      8.327 |
+|       4 | CF – Process |     5.413 |     5.619 |     5.657 |        16.689 | 16.689 / 3          |                      5.563 |
+|       8 | CF – Process |     3.469 |     4.191 |     5.623 |        13.283 | 13.283 / 3          |                      4.428 |
+|       2 | CF – Thread  |     8.339 |     8.281 |     8.436 |        25.056 | 25.056 / 3          |                      8.352 |
+|       4 | CF – Thread  |     5.265 |     5.579 |     5.218 |        16.062 | 16.062 / 3          |                      5.354 |
+|       8 | CF – Thread  |     3.324 |     3.685 |     5.204 |        12.213 | 12.213 / 3          |                      4.071 |
+                    |
 
 **Efficiency Results**
 | Workers  | Multiprocessing Efficiency  | Concurrent.futures Efficiency  |
